@@ -1,0 +1,9 @@
+<div id="detail" ng-controller="detail">
+    <div class="title">detail {{id}} in list {{listId}}</div>
+    <div class="content">
+        <label>输入:<input type="text" ng-model="inputText" placeholder="input text"/></label>
+        <div ng-if="inputText" class="line"><div class="text">{{inputText}}</div><div class="action a" gclick="add()">添加</div></div>
+        <div ng-repeat="line in list" class="line"><div class="text">{{line.text}}</div><div class="action a" ng-click="del(line.id)">删除</div></div>
+    </div>
+    <div class="back"><a href="list/{{listId}}">back</a></div>
+</div>

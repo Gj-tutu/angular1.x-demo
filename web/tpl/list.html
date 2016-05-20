@@ -1,0 +1,9 @@
+<div ng-controller="list">
+    <div class="title">list {{id}}</div>
+    <div class="list">
+        <div ng-repeat="item in list" class="item">
+            <a href="detail/{{id}}/{{item}}">detail {{item}}</a>
+        </div>
+    </div>
+    <div class="back"><a href="index">back</a></div>
+</div>
