@@ -30,21 +30,21 @@ app.config(['$controllerProvider', '$compileProvider', '$filterProvider', '$prov
     };
     $routeProvider
         .when('/index', {
-            templateUrl: 'tpl/index.html',
+            templateUrl: 'static/tpl/index.html',
             resolve: {
-                load: app.asyncJs('controller/index.js')
+                load: app.asyncJs('static/controller/index.js')
             }
         })
         .when('/list/:id', {
-            templateUrl: 'tpl/list.html',
+            templateUrl: 'static/tpl/list.html',
             resolve: {
-                load: app.asyncJs('controller/list.js')
+                load: app.asyncJs('static/controller/list.js')
             }
         })
         .when('/detail/:listId/:id', {
-            templateUrl: 'tpl/detail.html',
+            templateUrl: 'static/tpl/detail.html',
             resolve: {
-                load: app.asyncJs(['service/detail-text.js','controller/detail.js','js/vendor/fastclick.js','directive/gclick.js'])
+                load: app.asyncJs(['static/service/detail-text.js','static/controller/detail.js','static/js/vendor/fastclick.js','static/directive/gclick.js'])
             }
         })
         .otherwise({
